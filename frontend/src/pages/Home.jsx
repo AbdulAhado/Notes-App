@@ -31,7 +31,7 @@ const Home = () => {
   
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3030/api/note", {
+      const { data } = await axios.get("https://notes-app-backend-ssj8.onrender.com/api/note", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -54,7 +54,7 @@ const Home = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3030/api/note/add",
+        "https://notes-app-backend-ssj8.onrender.com/api/note/add",
         {
           title,
           description,
@@ -80,7 +80,7 @@ const Home = () => {
     e.preventDefault();
        try {
       const response = await axios.put(
-        `http://localhost:3030/api/note/${id}`,
+        `https://notes-app-backend-ssj8.onrender.com/api/note/${id}`,
         {
           title,
           description,
@@ -105,7 +105,7 @@ const Home = () => {
     e.preventDefault();
        try {
       const response = await axios.delete(
-        `http://localhost:3030/api/note/${id}`,
+        `https://notes-app-backend-ssj8.onrender.com/api/note/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`, //  you store the token in localStorage
