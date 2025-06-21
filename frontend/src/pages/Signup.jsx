@@ -11,7 +11,7 @@ const Signup = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3030/api/auth/register",{name, email, password})
+            const response = await axios.post("https://notes-app-backend-ssj8.onrender.com/api/auth/register",{name, email, password})
 
             if(response.data.success){
                 navigate('/login')
