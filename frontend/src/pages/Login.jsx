@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3030/api/auth/login",{email, password})
+            const response = await axios.post("https://notes-app-backend-ssj8.onrender.com/api/auth/login",{email, password})
             
             if(response.data.success){
                 login(response.data.user);
